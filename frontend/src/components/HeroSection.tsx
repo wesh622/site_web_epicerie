@@ -51,7 +51,7 @@ export function HeroSection({ shop }: { shop: Shop }) {
         <img
           src={shop.images.hero}
           alt="Devanture de Mon Épicerie illuminée la nuit à Nancy"
-          className="h-full w-full object-cover object-[center_30%]"
+          className="h-full w-full object-cover object-[center_40%]"
           fetchPriority="high"
         />
         <div

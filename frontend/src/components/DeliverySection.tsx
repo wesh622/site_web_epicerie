@@ -21,7 +21,7 @@ export function DeliverySection({ shop }: { shop: Shop }) {
           >
             <img
               src={shop.images.gallery[0]}
-              alt="Intérieur de Mon Épicerie la nuit"
+              alt="Mon Épicerie de Nuit — livraison à domicile 7j/7"
               loading="lazy"
               className="absolute inset-0 h-full w-full object-cover"
             />

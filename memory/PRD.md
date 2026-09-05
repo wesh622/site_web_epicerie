@@ -32,11 +32,16 @@ Site vitrine single-page pour l'épicerie de nuit "Mon Épicerie" (Nancy, 103 Bd
 - Horaires réels : lun–jeu + sam–dim 11h00–5h00, vendredi 12h00–5h00 (API, JSON-LD, table)
 - Avis Google : 4,7 · 95 avis (compteur vu sur Maps par le client)
 - Géoloc exacte : 48.6729929, 6.1650252 · Lien fiche Maps réel (bouton avis)
-- Photo hero : vraie devanture depuis la fiche Google Maps, optimisée WebP locale `/photos/devanture.webp` (267 Ko, 1200×2133)
+- Photo hero : vraie devanture de nuit (LED bleues) depuis la fiche Google Maps, WebP local `/photos/hero-nuit.webp` (135 Ko)
+
+## Photos (2026-09-05) — UNIQUEMENT la fiche Google Maps, extraites via navigateur
+7 photos extraites de la fiche ; 5 exploitables pour Mon Épicerie (2 écartées : Proxi et Epicerie Centrale = autres enseignes, 1 avec personne = Allo J'ai Soif)
+- hero : devanture nuit LED bleues (hero-nuit.webp) · livraison : flyer composite maison (livraison.webp)
+- rayons : boissons = frigo spiritueux réel, snacks = crop flyer (marques bonbons), dépannage = devanture jour, tabac = promo Absolut (⚠️ visuel pas idéal — la fiche n'a pas de photo tabac ; proposer au client de changer la carte en "Vins & spiritueux" ou d'uploader une photo du rayon tabac)
+- Texte livraison repris de leur fiche : "livraison 100% gratuite, minimum selon ville"
 
 ## Reste MOCKED / à valider
 - placeId `ChIJn5wEm3GZlEcRvMOPi3ou3GY` à confirmer (issu d'une fiche annexe) → refresh Google toujours MOCKED sans clé
-- Photos des rayons + galerie : encore générées par IA (une seule vraie photo fournie) — le client peut en uploader d'autres pour les remplacer
 
 ## Backlog priorisé
 - P0 : vrai numéro de téléphone, vraie note/avis Google, placeId réel → puis clé GOOGLE_PLACES_API_KEY dans backend/.env pour activer le refresh réel
