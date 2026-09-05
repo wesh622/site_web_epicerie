@@ -1,0 +1,207 @@
+{
+  "theme": "dark",
+  "archetype": "NIGHT_CONVENIENCE_EDITORIAL",
+  "project_name": "Mon Épicerie - Épicerie de Nuit Nancy",
+  "colors": {
+    "surfaces": [
+      {
+        "name": "page",
+        "kind": "solid",
+        "bg": "#0B0F14",
+        "on_bg": "#F3F4F6",
+        "on_bg_muted": "#94A3B8",
+        "roles": {
+          "link": "#38BDF8",
+          "error": "#F87171",
+          "success": "#34D399",
+          "accent_glow": "#F59E0B"
+        }
+      },
+      {
+        "name": "panel",
+        "kind": "solid",
+        "bg": "#131B26",
+        "on_bg": "#F8FAFC",
+        "on_bg_muted": "#94A3B8",
+        "roles": {
+          "border": "#223147",
+          "hover_bg": "#1A2536",
+          "tag_bg": "#1E293B"
+        }
+      },
+      {
+        "name": "inverse",
+        "kind": "solid",
+        "bg": "#F8FAFC",
+        "on_bg": "#0B0F14",
+        "on_bg_muted": "#475569"
+      },
+      {
+        "name": "hero",
+        "kind": "image",
+        "contrast_against": "#080C10",
+        "guarantee": "scrim: linear-gradient(180deg, rgba(11,15,20,0.82) 0%, rgba(11,15,20,0.65) 50%, rgba(11,15,20,0.95) 100%)",
+        "on_bg": "#FFFFFF",
+        "on_bg_muted": "#CBD5E1",
+        "roles": {
+          "link": "#38BDF8",
+          "error": "#F87171",
+          "success": "#34D399"
+        }
+      },
+      {
+        "name": "sticky_bar",
+        "kind": "glass",
+        "contrast_against": "#0B0F14",
+        "guarantee": "backdrop-blur-xl bg-[#0B0F14]/90 border-b border-[#223147] shadow-[0_10px_30px_rgba(0,0,0,0.5)]",
+        "on_bg": "#FFFFFF",
+        "on_bg_muted": "#94A3B8",
+        "roles": {
+          "phone_cta": "#F59E0B",
+          "status_open": "#10B981",
+          "status_closed": "#EF4444"
+        }
+      },
+      {
+        "name": "open_badge",
+        "kind": "solid",
+        "bg": "#064E3B",
+        "on_bg": "#6EE7B7",
+        "on_bg_muted": "#A7F3D0"
+      },
+      {
+        "name": "closed_badge",
+        "kind": "solid",
+        "bg": "#7F1D1D",
+        "on_bg": "#FCA5A5",
+        "on_bg_muted": "#FECACA"
+      },
+      {
+        "name": "category_card",
+        "kind": "solid",
+        "bg": "#141E2D",
+        "on_bg": "#F8FAFC",
+        "on_bg_muted": "#94A3B8"
+      }
+    ],
+    "accent": "#F59E0B",
+    "on_accent": "#000000",
+    "accent_secondary": "#06B6D4",
+    "on_accent_secondary": "#000000"
+  },
+  "typography": {
+    "font_heading": "'Space Grotesk Variable', sans-serif",
+    "font_body": "'DM Sans Variable', sans-serif",
+    "scale_px": {
+      "display": 60,
+      "h1": 48,
+      "h2": 36,
+      "h3": 24,
+      "body": 16,
+      "caption": 14
+    },
+    "letter_spacing": {
+      "display": "tracking-tighter",
+      "h2": "tracking-tight",
+      "overline": "tracking-[0.25em]"
+    }
+  },
+  "entry_surfaces": {
+    "/": "split hero — kinetic neon branding + dual mobile CTAs left, live open-status HUD + 3D luminous glass store capsule right"
+  },
+  "image_urls": {
+    "hero_background": {
+      "url": "https://images.unsplash.com/photo-1671408932328-c481eb33c527?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1ODh8MHwxfHNlYXJjaHwyfHxuaWdodCUyMGNvbnZlbmllbmNlJTIwc3RvcmUlMjBuZW9uJTIwY2l0eXxlbnwwfHx8fDE3ODg2MjU4Mzd8MA&ixlib=rb-4.1.0&q=85",
+      "category": "hero",
+      "description": "Storefront glowing at night under deep blue night sky, giving late night convenience vibe",
+      "usage": "Hero section background with dark cinematic gradient overlay"
+    },
+    "store_atmosphere": {
+      "url": "https://images.unsplash.com/photo-1697899245842-b75fee1ba17c?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1NTN8MHwxfHNlYXJjaHwyfHxuYW5jeSUyMGZyYW5jZSUyMGNpdHklMjBzdHJlZXQlMjBuaWdodHxlbnwwfHx8fDE3ODg2MjU4Mzd8MA&ixlib=rb-4.1.0&q=85",
+      "category": "location",
+      "description": "Nancy city night street scene with warm glowing lights and lively sidewalk ambiance",
+      "usage": "Location / Itinéraire section & local SEO card"
+    },
+    "products_shelves": {
+      "url": "https://images.unsplash.com/photo-1604719312566-8912e9227c6a?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjAzMzN8MHwxfHNlYXJjaHwxfHxncm9jZXJ5JTIwc25hY2tzJTIwZHJpbmtzJTIwc2hlbGYlMjBuaWdodHxlbnwwfHx8fDE3ODg2MjU4Mzd8MA&ixlib=rb-4.1.0&q=85",
+      "category": "products",
+      "description": "Stocked grocery store aisle with drinks, snacks and night convenience supplies",
+      "usage": "Products & Categories showcase backdrop and delivery section card"
+    },
+    "delivery_night_vibes": {
+      "url": "https://images.unsplash.com/photo-1599060052009-24d6d0b0161c?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1ODh8MHwxfHNlYXJjaHwxfHxuaWdodCUyMGNvbnZlbmllbmNlJTIwc3RvcmUlMjBuZW9uJTIwY2l0eXxlbnwwfHx8fDE3ODg2MjU4Mzd8MA&ixlib=rb-4.1.0&q=85",
+      "category": "delivery",
+      "description": "Late night urban rider in city street with neon ambiance",
+      "usage": "Livraison Express section feature banner"
+    }
+  },
+  "layouts_and_grids": {
+    "mobile_first_strategy": "80%+ mobile traffic expected; thumb-friendly sticky actions (Call 03 83 ... & GPS Itinéraire Waze/Google Maps), sticky bottom action bar on mobile viewports",
+    "bento_grid_categories": "Mode A Tetris Grid for product categories with asymmetrical cards (Large 'Boissons & Fraîcheur', 'Snacks & Salé/Sucré', 'Dépannage & Hygiène', 'Tabac/Presse & Vapes')",
+    "manifesto_chapters": "Numbered editorial chapters: 01 HORAIRES & OUVERTURE, 02 NOS RAYONS, 03 LIVRAISON EXPRESS, 04 AVIS CLIENTS & ACCÈS"
+  },
+  "motion_and_interactions": {
+    "engine": "motion/react + CSS smooth scrolling",
+    "hero_reveal": "Kinetic line-by-line staggered reveal with spring physics and glowing neon border badge",
+    "marquee": "Slow editorial ribbon (react-fast-marquee or motion loop) ticker: 'OUVERT 7J/7 JUSQU'À 5H DU MATIN • 103 BD D'HAUSSONVILLE NANCY • BOISSONS FRAÎCHES • SNACKS • DÉPANNAGE URGENCE • LIVRAISON EXPRESS NANCY'",
+    "status_pulse": "Live pulsing beacon dot (emerald green when open, amber when closing soon, crimson when closed)"
+  },
+  "client_side_live_schedule_logic": {
+    "description": "Client-side calculation handles night schedule crossing midnight (e.g., 18:00 to 05:00 next day). Determines if currently open, minutes until closure or opening, and highlights today's row in the 7-day schedule table.",
+    "time_zone": "Europe/Paris",
+    "default_hours": {
+      "lundi": "18h00 - 05h00",
+      "mardi": "18h00 - 05h00",
+      "mercredi": "18h00 - 05h00",
+      "jeudi": "18h00 - 05h00",
+      "vendredi": "18h00 - 05h00",
+      "samedi": "18h00 - 05h00",
+      "dimanche": "18h00 - 05h00"
+    }
+  },
+  "seo_and_local_business_spec": {
+    "name": "Mon Épicerie",
+    "address": "103 Boulevard d'Haussonville, 54000 Nancy",
+    "city": "Nancy",
+    "postal_code": "54000",
+    "phone": "+33 3 83 00 00 00",
+    "phone_display": "03 83 28 XX XX / 06 XX XX XX XX (cliquable)",
+    "keywords": "épicerie de nuit Nancy, ouvert jusqu'à 5h du matin, épicerie Haussonville, alimentation nocturne Nancy, livraison nuit Nancy",
+    "google_rating": 4.8,
+    "google_reviews_count": 142,
+    "google_maps_url": "https://maps.google.com/?q=103+Boulevard+d'Haussonville+54000+Nancy"
+  },
+  "components_structure": {
+    "NavbarSticky": "frontend/src/components/NavbarSticky.tsx (Live open badge, call CTA, schedule anchor)",
+    "HeroSection": "frontend/src/components/HeroSection.tsx (Kinetic heading, tagline, dual CTA Appeler + Itinéraire, fast stats)",
+    "MarqueeRibbon": "frontend/src/components/MarqueeRibbon.tsx (Slow atmospheric editorial ribbon)",
+    "ScheduleSection": "frontend/src/components/ScheduleSection.tsx (7-day interactive table with real-time today highlight & countdown)",
+    "CategoriesSection": "frontend/src/components/CategoriesSection.tsx (Bento grid with high-impact product cards, icons, badges)",
+    "DeliverySection": "frontend/src/components/DeliverySection.tsx (Zone map, delivery rules, minimum order, payment methods CB/Espèces/Lydia)",
+    "ReviewsSection": "frontend/src/components/ReviewsSection.tsx (Google reviews badge 4.8/5, real quotes, outbound Google link)",
+    "MapLocationSection": "frontend/src/components/MapLocationSection.tsx (Google Maps embed, parking info, bus/tram access, Haussonville landmark)",
+    "Footer": "frontend/src/components/Footer.tsx (Opening hours recap, legal notices, mentions légales modal, copyright)",
+    "MobileBottomBar": "frontend/src/components/MobileBottomBar.tsx (Sticky thumb bar with instant Call & GPS buttons)"
+  },
+  "testing_attributes": {
+    "sticky_call_button": "sticky-call-button",
+    "sticky_status_badge": "sticky-status-badge",
+    "hero_call_button": "hero-call-button",
+    "hero_directions_button": "hero-directions-button",
+    "schedule_table": "schedule-table",
+    "schedule_row_today": "schedule-row-today",
+    "product_category_card": "product-category-card",
+    "delivery_info_card": "delivery-info-card",
+    "google_review_card": "google-review-card",
+    "google_maps_embed": "google-maps-embed"
+  },
+  "instructions_to_main_agent": [
+    "Use dark theme by default: Deep obsidian #0B0F14 base with neon warm amber #F59E0B and electric cyan #06B6D4 accents that evoke night grocery neon signs.",
+    "Import '@fontsource-variable/space-grotesk' for display/headings and '@fontsource-variable/dm-sans' for body in frontend/src/index.css.",
+    "Implement rock-solid French local SEO with Schema.org LocalBusiness JSON-LD in index.html/App.tsx.",
+    "Ensure client-side schedule calculation works reliably for night shifts spanning past midnight (18:00 - 05:00 next day).",
+    "FastAPI backend /api/shop route must serve shop metadata (hours, categories, phone, address, delivery zones, reviews) with graceful fallback on frontend if API is unavailable.",
+    "Always add data-testid on every interactive button, link, schedule row, and category card.",
+    "Mobile bottom sticky action bar is crucial for conversion when opened past midnight."
+  ]
+}

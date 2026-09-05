@@ -1,0 +1,44 @@
+# PRD — Mon Épicerie Nancy (site vitrine)
+
+## Problem statement (original)
+Site vitrine single-page pour l'épicerie de nuit "Mon Épicerie" (Nancy, 103 Bd d'Haussonville). Stack React + FastAPI + MongoDB. SEO local FR, mobile-first, statut "ouvert maintenant" calculé côté client (passage minuit → 5h). 2 endpoints : GET /api/shop, POST /api/refresh-google (cache 30 jours, Google Places). Pas de paiement, pas d'auth, pas de commande en ligne en v1. Avis Google = note + nombre + lien sortant uniquement (TOS).
+
+## Décisions utilisateur (2026-09-05)
+- Livraison : section générique "Nous contacter" (pas d'info engageante inventée)
+- Pas de back-office en v1 : édition directe en base Mongo
+- Pas de clé Google Places : /api/refresh-google reste MOCKED, note/avis saisis à la main
+- Site construit pour le gérant : contenu prudent, à faire valider
+- Direction artistique : libre → thème "nuit éditoriale" obsidienne + ambre néon (#F59E0B), Space Grotesk / DM Sans, framer-motion (motion/react) + lenis, hero cinétique avec reveal masqué ligne par ligne, marquee éditorial, chapitres numérotés 01–05, parallaxe hero + tilt 3D sur la carte HUD
+
+## Architecture
+- Backend : FastAPI, `server.py` (modèles Pydantic Shop + 2 endpoints), `seed.py` idempotent, collection Mongo `shops` (1 doc, id="mon-epicerie", index unique sur id)
+- Frontend : Vite + React 19 + TS, page unique `src/pages/Home.tsx`, 10 composants dans `src/components/`, données via TanStack Query + fallback statique (`src/lib/shop.ts`) pour le rendu CDN sans backend
+- Logique horaires : `src/lib/hours.ts` (Europe/Paris, shifts traversant minuit, refresh 30 s)
+- SEO : meta FR + JSON-LD GroceryStore/LocalBusiness statiques dans `index.html`, react-helmet-async pour le titre dynamique, sitemap.xml, robots.txt, favicon.svg
+
+## User personas
+- Étudiant/noctambule cherchant "épicerie de nuit Nancy" sur Google, sur mobile, veut horaires + tél + itinéraire en < 2 s
+- Habitant du quartier Haussonville ayant un besoin de dépannage tardif
+
+## Implémenté (2026-09-05)
+- Phase 1 : schéma Mongo + GET /api/shop + seed ✔
+- Phase 2 : sticky bar, hero cinétique, horaires 7 jours + statut live ✔
+- Phase 3 : catégories (bento 4 rayons), livraison, avis Google (lien sortant), carte Maps embed ✔
+- Phase 4 : meta FR, JSON-LD, sitemap, robots, favicon, OG ✔
+- Phase 5 : /api/refresh-google codé (fenêtre 30j + Places API New) mais MOCKED sans clé ; polish motion (lenis, parallaxe, tilt 3D, marquee) ✔ — Lighthouse non mesuré
+
+## Placeholders à valider par le gérant (MOCKED)
+- Téléphone : 03 83 00 00 00 (factice)
+- Note Google 4,7 / 126 avis (factice) + placeId "PLACE_ID_A_REMPLACER"
+- Géoloc JSON-LD approximative (48.6854, 6.1605)
+
+## Backlog priorisé
+- P0 : vrai numéro de téléphone, vraie note/avis Google, placeId réel → puis clé GOOGLE_PLACES_API_KEY dans backend/.env pour activer le refresh réel
+- P1 : image hero compressée (< 100 Ko, actuellement ~950 Ko), OG image dédiée 1200×630
+- P1 : zones de livraison réelles + minimum de commande une fois fournis
+- P2 : mini back-office horaires/promos (refusé en v1), cron automatique pour refresh-google, Lighthouse ≥ 95 mobile
+
+## Prochaines tâches
+1. Récupérer les vraies infos du gérant (tél, horaires exacts, placeId) → update seed.py
+2. Ajouter GOOGLE_PLACES_API_KEY → tester POST /api/refresh-google réel
+3. Mesure Lighthouse mobile et compression hero
