@@ -1,41 +1,48 @@
-# Mon Épicerie — Site vitrine
+# Mon Épicerie de Nuit — Site vitrine
 
 Site vitrine statique (HTML/CSS/JS, aucune dépendance) pour l'épicerie
-"Livraison alcool Nancy, Mon Épicerie".
+"Mon Épicerie de Nuit" à Nancy.
 
 ## Structure
 
 ```
-index.html       Page unique (hero, produits, horaires, avis, localisation, contact)
-css/style.css    Styles (thème sombre premium, responsive)
-js/script.js     Menu mobile, liens WhatsApp, animations au scroll
+index.html          Page unique (hero, produits, horaires, avis, localisation, contact)
+css/style.css        Styles (thème sombre premium, responsive)
+js/script.js         Menu mobile, animations au scroll
+assets/photos/       Vraies photos de la boutique (enseigne, produits, devanture)
 ```
 
-## À compléter avant mise en ligne
+## Informations intégrées
 
-Les informations publiques de la fiche Google (nom, note 4,8/5 sur 95 avis,
-avis clients, coordonnées GPS, mention "ferme à 05:00 le dimanche") sont déjà
-intégrées. Il reste à compléter manuellement :
+- **Nom** : Mon Épicerie de Nuit
+- **Téléphone** : 03 56 58 24 70 (relevé sur l'enseigne et la devanture)
+- **Horaires** (relevés sur l'enseigne en boutique) :
+  - Lundi à mercredi : 11h30 – 00h00
+  - Jeudi à samedi : 11h30 – 02h30
+  - Dimanche : 09h30 – 01h00
+- **Note Google** : 4,8/5 (95 avis)
+- **Lien Google Maps** : https://maps.app.goo.gl/x1AcWGoN26urCd8v9
 
-1. **Numéro WhatsApp** — dans `js/script.js`, ligne `WHATSAPP_NUMBER`,
-   remplacer `"33600000000"` par le vrai numéro (format international,
-   sans `+` ni espaces).
-2. **Téléphone et adresse exacte** — dans `index.html`, section
-   `#contact` (`<em>À compléter par l'établissement</em>` et
-   `<em>(adresse précise à confirmer — voir Google Maps)</em>`).
-3. **Horaires détaillés** — le tableau dans la section `#horaires`
-   renvoie vers Google Maps par prudence (les horaires n'étaient pas
-   toutes disponibles). Remplacez `Voir Google Maps` par les horaires
-   réels une fois confirmés.
-4. (Optionnel) **Vraies photos** — le site utilise des icônes/emojis en
-   attendant de vraies photos de la boutique/produits. Ajoutez vos
-   photos dans `assets/` et remplacez les blocs `.visual-card` /
-   `.product-icon` par des `<img>`.
+## À vérifier / compléter
+
+1. **Adresse postale exacte** — non présente sur les photos fournies ni
+   résolue depuis le lien Google Maps ; le site s'appuie uniquement sur la
+   carte + le lien "Itinéraire" en attendant. À ajouter dans `index.html`,
+   section `#contact` (`<em>(adresse précise à confirmer — voir Google Maps)</em>`).
+2. **Lien Instagram** — le compte affiché sur l'enseigne est
+   `Mon.epicerie`. Le site pointe vers
+   `https://www.instagram.com/mon.epicerie/` par déduction : à vérifier et
+   corriger si besoin dans `index.html` (section `#contact`, `.social-row`).
+3. **Liens Uber Eats / Deliveroo** — les logos figurent sur l'enseigne mais
+   sans identifiant de page, donc les badges "Uber Eats" / "Deliveroo" dans
+   `.social-row` ne sont pas cliquables pour l'instant. Ajoutez vos vraies
+   URLs de profil et transformez ces `<span>` en `<a href="...">`.
+4. **Horaires** — reconfirmez-les avec l'exploitant si l'enseigne a changé
+   depuis la prise des photos (la fiche Google affichait par ailleurs
+   "ferme à 05h00 le dimanche", différent de l'enseigne — l'enseigne a été
+   privilégiée ici car plus détaillée et a priori plus à jour).
 
 ## Aperçu en local
-
-Ouvrez simplement `index.html` dans un navigateur, ou lancez un petit
-serveur local :
 
 ```bash
 python3 -m http.server 8080

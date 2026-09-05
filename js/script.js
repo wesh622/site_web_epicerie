@@ -1,22 +1,6 @@
 (function () {
   "use strict";
 
-  // ---- Config : à personnaliser par l'établissement ----
-  var WHATSAPP_NUMBER = "33600000000"; // TODO: remplacer par le vrai numéro (format international, sans + ni espaces)
-  var WHATSAPP_MESSAGE = "Bonjour, je souhaiterais passer une commande sur Mon Épicerie Nancy.";
-
-  var whatsappUrl =
-    "https://wa.me/" + WHATSAPP_NUMBER + "?text=" + encodeURIComponent(WHATSAPP_MESSAGE);
-
-  ["hero-whatsapp", "contact-whatsapp", "floating-whatsapp"].forEach(function (id) {
-    var el = document.getElementById(id);
-    if (el) {
-      el.setAttribute("href", whatsappUrl);
-      el.setAttribute("target", "_blank");
-      el.setAttribute("rel", "noopener");
-    }
-  });
-
   // ---- Menu mobile ----
   var toggle = document.getElementById("nav-toggle");
   var nav = document.getElementById("main-nav");
