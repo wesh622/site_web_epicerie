@@ -15,6 +15,7 @@ assets/photos/       Vraies photos de la boutique (enseigne, produits, devanture
 ## Informations intégrées
 
 - **Nom** : Mon Épicerie de Nuit
+- **Adresse** : 103 Boulevard d'Haussonville, 54000 Nancy
 - **Téléphone** : 03 56 58 24 70 (relevé sur l'enseigne et la devanture)
 - **Horaires** (relevés sur l'enseigne en boutique) :
   - Lundi à mercredi : 11h30 – 00h00
@@ -25,19 +26,15 @@ assets/photos/       Vraies photos de la boutique (enseigne, produits, devanture
 
 ## À vérifier / compléter
 
-1. **Adresse postale exacte** — non présente sur les photos fournies ni
-   résolue depuis le lien Google Maps ; le site s'appuie uniquement sur la
-   carte + le lien "Itinéraire" en attendant. À ajouter dans `index.html`,
-   section `#contact` (`<em>(adresse précise à confirmer — voir Google Maps)</em>`).
-2. **Lien Instagram** — le compte affiché sur l'enseigne est
+1. **Lien Instagram** — le compte affiché sur l'enseigne est
    `Mon.epicerie`. Le site pointe vers
    `https://www.instagram.com/mon.epicerie/` par déduction : à vérifier et
    corriger si besoin dans `index.html` (section `#contact`, `.social-row`).
-3. **Liens Uber Eats / Deliveroo** — les logos figurent sur l'enseigne mais
+2. **Liens Uber Eats / Deliveroo** — les logos figurent sur l'enseigne mais
    sans identifiant de page, donc les badges "Uber Eats" / "Deliveroo" dans
    `.social-row` ne sont pas cliquables pour l'instant. Ajoutez vos vraies
    URLs de profil et transformez ces `<span>` en `<a href="...">`.
-4. **Horaires** — reconfirmez-les avec l'exploitant si l'enseigne a changé
+3. **Horaires** — reconfirmez-les avec l'exploitant si l'enseigne a changé
    depuis la prise des photos (la fiche Google affichait par ailleurs
    "ferme à 05h00 le dimanche", différent de l'enseigne — l'enseigne a été
    privilégiée ici car plus détaillée et a priori plus à jour).
