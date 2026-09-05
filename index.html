@@ -24,6 +24,7 @@
 
     <nav class="main-nav" id="main-nav">
       <a href="#produits">Produits</a>
+      <a href="#galerie">Galerie</a>
       <a href="#horaires">Horaires</a>
       <a href="#avis">Avis</a>
       <a href="#localisation">Localisation</a>
@@ -60,7 +61,7 @@
           <strong>4,8/5</strong>
           <span>· 95 avis Google</span>
         </a>
-        <span class="badge-pill">🕒 Ouvert 7j/7 · service tardif</span>
+        <span class="badge-pill" id="open-status">🕒 Ouvert 7j/7 jusqu'à 5h</span>
       </div>
 
       <div class="hero-cta">
@@ -79,6 +80,22 @@
     </div>
     </div>
   </section>
+
+  <!-- MARQUEE -->
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee-track">
+      <span>7J/7 · JUSQU'À 5H DU MATIN</span>
+      <span>103 BD D'HAUSSONVILLE — NANCY</span>
+      <span>SPIRITUEUX PREMIUM</span>
+      <span>SNACKS &amp; CONFISERIES</span>
+      <span>LIVRAISON À DOMICILE</span>
+      <span>7J/7 · JUSQU'À 5H DU MATIN</span>
+      <span>103 BD D'HAUSSONVILLE — NANCY</span>
+      <span>SPIRITUEUX PREMIUM</span>
+      <span>SNACKS &amp; CONFISERIES</span>
+      <span>LIVRAISON À DOMICILE</span>
+    </div>
+  </div>
 
   <!-- STATS -->
   <section class="stats">
@@ -185,6 +202,35 @@
     </div>
   </section>
 
+  <!-- GALERIE -->
+  <section class="gallery" id="galerie">
+    <div class="container">
+      <p class="section-tag center">Galerie</p>
+      <h2 class="center">La boutique en photos</h2>
+      <p class="section-lead center">
+        Un aperçu réel de notre épicerie — cliquez sur une photo pour l'agrandir.
+      </p>
+
+      <div class="gallery-grid">
+        <button class="gallery-item reveal" type="button" data-full="assets/photos/facade-nuit.png">
+          <img src="assets/photos/facade-nuit.png" alt="Devanture de Mon Épicerie de Nuit éclairée la nuit" loading="lazy">
+        </button>
+        <button class="gallery-item reveal" type="button" data-full="assets/photos/frigo-alcools.webp">
+          <img src="assets/photos/frigo-alcools.webp" alt="Frigo de spiritueux en boutique" loading="lazy">
+        </button>
+        <button class="gallery-item reveal" type="button" data-full="assets/photos/vodka-grey-goose-belvedere.png">
+          <img src="assets/photos/vodka-grey-goose-belvedere.png" alt="Vodkas Grey Goose et Belvedere en vitrine" loading="lazy">
+        </button>
+        <button class="gallery-item reveal" type="button" data-full="assets/photos/champagne-dom-perignon.webp">
+          <img src="assets/photos/champagne-dom-perignon.webp" alt="Champagne Dom Pérignon et autres cuvées" loading="lazy">
+        </button>
+        <button class="gallery-item reveal" type="button" data-full="assets/photos/enseigne-horaires.png">
+          <img src="assets/photos/enseigne-horaires.png" alt="Enseigne de Mon Épicerie de Nuit" loading="lazy">
+        </button>
+      </div>
+    </div>
+  </section>
+
   <!-- HORAIRES -->
   <section class="hours" id="horaires">
     <div class="container hours-grid">
@@ -203,13 +249,13 @@
       <div class="hours-table-wrap reveal">
         <table class="hours-table">
           <tbody>
-            <tr><th>Lundi</th><td>11h00 – 05h00</td></tr>
-            <tr><th>Mardi</th><td>11h00 – 05h00</td></tr>
-            <tr><th>Mercredi</th><td>11h00 – 05h00</td></tr>
-            <tr><th>Jeudi</th><td>11h00 – 05h00</td></tr>
-            <tr class="highlight"><th>Vendredi</th><td>12h00 – 05h00</td></tr>
-            <tr><th>Samedi</th><td>11h00 – 05h00</td></tr>
-            <tr><th>Dimanche</th><td>11h00 – 05h00</td></tr>
+            <tr data-day="1"><th>Lundi</th><td>11h00 – 05h00</td></tr>
+            <tr data-day="2"><th>Mardi</th><td>11h00 – 05h00</td></tr>
+            <tr data-day="3"><th>Mercredi</th><td>11h00 – 05h00</td></tr>
+            <tr data-day="4"><th>Jeudi</th><td>11h00 – 05h00</td></tr>
+            <tr data-day="5"><th>Vendredi</th><td>12h00 – 05h00</td></tr>
+            <tr data-day="6"><th>Samedi</th><td>11h00 – 05h00</td></tr>
+            <tr data-day="0"><th>Dimanche</th><td>11h00 – 05h00</td></tr>
           </tbody>
         </table>
         <figure class="hours-photo">
@@ -330,6 +376,7 @@
     </div>
     <nav class="footer-nav">
       <a href="#produits">Produits</a>
+      <a href="#galerie">Galerie</a>
       <a href="#horaires">Horaires</a>
       <a href="#avis">Avis</a>
       <a href="#localisation">Localisation</a>
@@ -341,6 +388,21 @@
 <a href="tel:+33356582470" class="floating-call" aria-label="Appeler Mon Épicerie de Nuit">
   <svg viewBox="0 0 24 24" class="icon" aria-hidden="true"><path fill="currentColor" d="M6.6 10.8c1.4 2.8 3.8 5.2 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.9 21 3 13.1 3 3.5c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.4 0 .8-.2 1L6.6 10.8z"/></svg>
 </a>
+
+<div class="mobile-bar">
+  <a href="tel:+33356582470" class="btn btn-primary">
+    <svg viewBox="0 0 24 24" class="icon" aria-hidden="true"><path fill="currentColor" d="M6.6 10.8c1.4 2.8 3.8 5.2 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.9 21 3 13.1 3 3.5c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.4 0 .8-.2 1L6.6 10.8z"/></svg>
+    Appeler
+  </a>
+  <a href="https://maps.app.goo.gl/x1AcWGoN26urCd8v9" target="_blank" rel="noopener" class="btn btn-ghost">
+    Itinéraire
+  </a>
+</div>
+
+<div class="lightbox" id="lightbox" hidden>
+  <button class="lightbox-close" id="lightbox-close" aria-label="Fermer">✕</button>
+  <img id="lightbox-img" src="" alt="">
+</div>
 
 <script src="js/script.js"></script>
 </body>
