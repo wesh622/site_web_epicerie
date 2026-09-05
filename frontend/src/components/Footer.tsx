@@ -14,7 +14,7 @@ export function Footer({ shop }: { shop: Shop }) {
         <div>
           <p className="text-xs uppercase tracking-[0.25em] text-muted-foreground">Horaires</p>
           <p className="mt-3 font-heading text-base text-slate-200">Lundi — Dimanche</p>
-          <p className="font-heading text-base text-neon">18h00 – 5h00</p>
+          <p className="font-heading text-base text-neon">Jusqu'à 5h00 du matin</p>
         </div>
         <div>
           <p className="text-xs uppercase tracking-[0.25em] text-muted-foreground">Contact</p>

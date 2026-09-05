@@ -1,7 +1,8 @@
 """Seed idempotent du document unique `shops` — Mon Épicerie, Nancy.
 
 Contenu rédigé une fois, figé (aucun appel LLM au runtime).
-Placeholders à faire valider par le gérant : téléphone, note/avis Google, placeId, géoloc.
+Données réelles confirmées (2026-09) : téléphone, horaires (11h–5h, ven. 12h–5h), géoloc, 95 avis.
+placeId à confirmer auprès du gérant pour activer le refresh Google réel.
 """
 import asyncio
 
@@ -9,28 +10,38 @@ from lib.db import db, ensure_indexes
 
 IMG = "https://static.prod-images.emergentagent.com/jobs/cb381ab1-5c77-4cb2-94d5-cdd6d47f5c6b/images"
 
-NIGHT = {"open": "18:00", "close": "05:00", "closed": False}
 DAYS = ["lundi", "mardi", "mercredi", "jeudi", "vendredi", "samedi", "dimanche"]
+
+
+def hours_for(day: str) -> dict:
+    return {
+        "day": day,
+        "label": day.capitalize(),
+        "open": "12:00" if day == "vendredi" else "11:00",
+        "close": "05:00",
+        "closed": False,
+    }
+
 
 SHOP = {
     "id": "mon-epicerie",
     "name": "Mon Épicerie",
     "tagline": "Ouvert jusqu'à 5h du matin",
-    "phone": "+33383000000",
-    "phoneDisplay": "03 83 00 00 00",
+    "phone": "+33356582470",
+    "phoneDisplay": "03 56 58 24 70",
     "address": {
         "street": "103 Boulevard d'Haussonville",
         "postalCode": "54000",
         "city": "Nancy",
     },
-    "geo": {"lat": 48.6854, "lng": 6.1605},
-    "hours": [{"day": d, "label": d.capitalize(), **NIGHT} for d in DAYS],
+    "geo": {"lat": 48.6729929, "lng": 6.1650252},
+    "hours": [hours_for(d) for d in DAYS],
     "google": {
-        "placeId": "PLACE_ID_A_REMPLACER",
+        "placeId": "ChIJn5wEm3GZlEcRvMOPi3ou3GY",
         "rating": 4.7,
-        "reviewCount": 126,
+        "reviewCount": 95,
         "mapsUrl": "https://www.google.com/maps/dir/?api=1&destination=Mon%20%C3%89picerie%2C%20103%20Boulevard%20d%27Haussonville%2C%2054000%20Nancy",
-        "reviewsUrl": "https://www.google.com/maps/search/?api=1&query=Mon%20%C3%89picerie%20103%20Boulevard%20d%27Haussonville%20Nancy",
+        "reviewsUrl": "https://www.google.com/maps/place/Livraison+alcool+Nancy,+Mon+%C3%89picerie/@48.6729929,6.1650252,17z/data=!4m6!3m5!1s0x479499ac33d263f5:0x72720baa7ae2f27f!8m2!3d48.6729929!4d6.1650252!16s%2Fg%2F11jrpjgc85",
         "lastRefreshed": None,
     },
     "sections": {
@@ -74,7 +85,7 @@ SHOP = {
     },
     "theme": {"accent": "#F59E0B", "font": "space-grotesk"},
     "images": {
-        "hero": f"{IMG}/46fd405670ccd6bc1f04953d4b5d72229aa8d2b90a3e5c0be3851216315ee699.jpeg",
+        "hero": "/photos/devanture.webp",
         "gallery": [
             f"{IMG}/c6e0d99f7e98fdea80c5f19038a1b08210f4c42b7b69a7fe5c845aa9ff5587e2.jpeg",
             f"{IMG}/4fc5799296d34e72676a17346927470f284312716ab4aa9ffab51be5cafad3f0.jpeg",

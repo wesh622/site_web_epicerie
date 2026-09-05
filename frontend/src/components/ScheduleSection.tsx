@@ -43,8 +43,8 @@ export function ScheduleSection({ shop }: { shop: Shop }) {
             <p className="mt-2 text-lg text-muted-foreground">{status.detail}</p>
           </div>
           <p className="mt-8 text-sm text-muted-foreground">
-            Statut calculé en direct, fuseau Europe/Paris. Le service de nuit commence à 18h et court jusqu'à 5h du
-            matin.
+            Statut calculé en direct, fuseau Europe/Paris. Le service court jusqu'à 5h du matin, 7 jours sur 7 — le
+            vendredi, ouverture à midi.
           </p>
         </motion.div>
 

@@ -66,26 +66,31 @@ export interface Shop {
 const IMG =
   "https://static.prod-images.emergentagent.com/jobs/cb381ab1-5c77-4cb2-94d5-cdd6d47f5c6b/images";
 
-const night = { open: "18:00", close: "05:00", closed: false };
 const days = ["lundi", "mardi", "mercredi", "jeudi", "vendredi", "samedi", "dimanche"];
 
 export const FALLBACK_SHOP: Shop = {
   id: "mon-epicerie",
   name: "Mon Épicerie",
   tagline: "Ouvert jusqu'à 5h du matin",
-  phone: "+33383000000",
-  phoneDisplay: "03 83 00 00 00",
+  phone: "+33356582470",
+  phoneDisplay: "03 56 58 24 70",
   address: { street: "103 Boulevard d'Haussonville", postalCode: "54000", city: "Nancy" },
-  geo: { lat: 48.6854, lng: 6.1605 },
-  hours: days.map((d) => ({ day: d, label: d.charAt(0).toUpperCase() + d.slice(1), ...night })),
+  geo: { lat: 48.6729929, lng: 6.1650252 },
+  hours: days.map((d) => ({
+    day: d,
+    label: d.charAt(0).toUpperCase() + d.slice(1),
+    open: d === "vendredi" ? "12:00" : "11:00",
+    close: "05:00",
+    closed: false,
+  })),
   google: {
-    placeId: "PLACE_ID_A_REMPLACER",
+    placeId: "ChIJn5wEm3GZlEcRvMOPi3ou3GY",
     rating: 4.7,
-    reviewCount: 126,
+    reviewCount: 95,
     mapsUrl:
       "https://www.google.com/maps/dir/?api=1&destination=Mon%20%C3%89picerie%2C%20103%20Boulevard%20d%27Haussonville%2C%2054000%20Nancy",
     reviewsUrl:
-      "https://www.google.com/maps/search/?api=1&query=Mon%20%C3%89picerie%20103%20Boulevard%20d%27Haussonville%20Nancy",
+      "https://www.google.com/maps/place/Livraison+alcool+Nancy,+Mon+%C3%89picerie/@48.6729929,6.1650252,17z/data=!4m6!3m5!1s0x479499ac33d263f5:0x72720baa7ae2f27f!8m2!3d48.6729929!4d6.1650252!16s%2Fg%2F11jrpjgc85",
     lastRefreshed: null,
   },
   sections: {

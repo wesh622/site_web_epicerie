@@ -51,7 +51,7 @@ export function HeroSection({ shop }: { shop: Shop }) {
         <img
           src={shop.images.hero}
           alt="Devanture de Mon Épicerie illuminée la nuit à Nancy"
-          className="h-full w-full object-cover"
+          className="h-full w-full object-cover object-[center_30%]"
           fetchPriority="high"
         />
         <div
@@ -133,7 +133,7 @@ export function HeroSection({ shop }: { shop: Shop }) {
           >
             <span>7j/7</span>
             <span className="h-3 w-px bg-edge" />
-            <span>18h — 5h</span>
+            <span>Jusqu'à 5h</span>
             <span className="h-3 w-px bg-edge" />
             <span>Bd d'Haussonville</span>
           </motion.div>
@@ -170,7 +170,7 @@ export function HeroSection({ shop }: { shop: Shop }) {
             <div className="space-y-4 text-sm">
               <div className="flex items-center gap-3 text-slate-300">
                 <Clock className="h-4 w-4 text-neon" />
-                Tous les jours · 18h00 — 5h00
+                Tous les jours · jusqu'à 5h00 du matin
               </div>
               <div className="flex items-center gap-3 text-slate-300">
                 <MapPin className="h-4 w-4 text-neon" />

@@ -27,10 +27,16 @@ Site vitrine single-page pour l'épicerie de nuit "Mon Épicerie" (Nancy, 103 Bd
 - Phase 4 : meta FR, JSON-LD, sitemap, robots, favicon, OG ✔
 - Phase 5 : /api/refresh-google codé (fenêtre 30j + Places API New) mais MOCKED sans clé ; polish motion (lenis, parallaxe, tilt 3D, marquee) ✔ — Lighthouse non mesuré
 
-## Placeholders à valider par le gérant (MOCKED)
-- Téléphone : 03 83 00 00 00 (factice)
-- Note Google 4,7 / 126 avis (factice) + placeId "PLACE_ID_A_REMPLACER"
-- Géoloc JSON-LD approximative (48.6854, 6.1605)
+## Données réelles intégrées (2026-09-05, confirmées par le client)
+- Téléphone réel : 03 56 58 24 70 (boutons Appeler, JSON-LD, footer)
+- Horaires réels : lun–jeu + sam–dim 11h00–5h00, vendredi 12h00–5h00 (API, JSON-LD, table)
+- Avis Google : 4,7 · 95 avis (compteur vu sur Maps par le client)
+- Géoloc exacte : 48.6729929, 6.1650252 · Lien fiche Maps réel (bouton avis)
+- Photo hero : vraie devanture depuis la fiche Google Maps, optimisée WebP locale `/photos/devanture.webp` (267 Ko, 1200×2133)
+
+## Reste MOCKED / à valider
+- placeId `ChIJn5wEm3GZlEcRvMOPi3ou3GY` à confirmer (issu d'une fiche annexe) → refresh Google toujours MOCKED sans clé
+- Photos des rayons + galerie : encore générées par IA (une seule vraie photo fournie) — le client peut en uploader d'autres pour les remplacer
 
 ## Backlog priorisé
 - P0 : vrai numéro de téléphone, vraie note/avis Google, placeId réel → puis clé GOOGLE_PLACES_API_KEY dans backend/.env pour activer le refresh réel
