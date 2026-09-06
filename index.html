@@ -3,13 +3,54 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Mon Épicerie de Nuit — Livraison d'alcool &amp; épicerie à Nancy</title>
-<meta name="description" content="Mon Épicerie de Nuit, votre épicerie de nuit à Nancy. Livraison d'alcool, boissons, snacks et épicerie du quotidien, ouvert 7j/7 jusqu'à 5h du matin. Note 4,8/5 sur 95 avis.">
-<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🛒</text></svg>">
+<title>Totem — Tabac · Presse · Jeux · Point relais colis à Nancy</title>
+<meta name="description" content="Totem, votre tabac-presse au 37 Bd d'Haussonville à Nancy. Tabac, journaux et magazines, jeux FDJ, Compte Nickel, timbres fiscaux et retrait de colis. Ouvert du lundi au dimanche matin. 3,9/5 sur 47 avis Google.">
+<meta name="theme-color" content="#faf7f2">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="Totem — Tabac · Presse · Jeux · Point relais colis à Nancy">
+<meta property="og:description" content="Tabac-presse de quartier au 37 Bd d'Haussonville, 54000 Nancy. Jeux FDJ, Compte Nickel, timbres fiscaux et retrait de colis.">
+<meta property="og:locale" content="fr_FR">
+
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2222%22 fill=%22%23c4362c%22/><path d=%22M50 16 L70 34 L50 52 L30 34 Z%22 fill=%22%23f7efe2%22/><rect x=%2244%22 y=%2252%22 width=%2212%22 height=%2232%22 fill=%22%23f7efe2%22/></svg>">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700;9..144,800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "TobaccoShop",
+  "name": "Totem",
+  "description": "Tabac-presse de quartier à Nancy : tabac, journaux et magazines, jeux FDJ, Compte Nickel, timbres fiscaux et point relais colis.",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "37 Boulevard d'Haussonville",
+    "postalCode": "54000",
+    "addressLocality": "Nancy",
+    "addressCountry": "FR"
+  },
+  "telephone": "+33383272426",
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 48.675264,
+    "longitude": 6.163203
+  },
+  "hasMap": "https://maps.app.goo.gl/biE6Pykx8JtbwdE49",
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "3.9",
+    "reviewCount": "47",
+    "bestRating": "5"
+  },
+  "openingHoursSpecification": [
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "07:30", "closes": "19:15" },
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "08:00", "closes": "19:15" },
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": "Sunday", "opens": "09:00", "closes": "12:15" }
+  ]
+}
+</script>
 </head>
 <body>
 
@@ -17,21 +58,24 @@
 
 <header class="site-header" id="header">
   <div class="container header-inner">
-    <a href="#accueil" class="logo">
-      <span class="logo-mark" aria-hidden="true">🛒</span>
-      <span class="logo-text">Mon Épicerie de Nuit<span class="logo-sub">Nancy</span></span>
+    <a href="#accueil" class="logo" aria-label="Totem, tabac presse à Nancy">
+      <svg class="logo-mark" viewBox="0 0 40 48" aria-hidden="true">
+        <path d="M20 2 L34 15 L20 28 L6 15 Z" fill="currentColor"/>
+        <rect x="15" y="28" width="10" height="18" rx="2" fill="currentColor" opacity=".55"/>
+      </svg>
+      <span class="logo-text">Totem<span class="logo-sub">Tabac · Presse · Nancy</span></span>
     </a>
 
-    <nav class="main-nav" id="main-nav">
-      <a href="#produits">Produits</a>
+    <nav class="main-nav" id="main-nav" aria-label="Navigation principale">
+      <a href="#services">Services</a>
+      <a href="#colis">Colis</a>
       <a href="#horaires">Horaires</a>
       <a href="#avis">Avis</a>
-      <a href="#localisation">Localisation</a>
-      <a href="#contact">Contact</a>
+      <a href="#localisation">Nous trouver</a>
     </nav>
 
     <div class="header-actions">
-      <a href="#contact" class="btn btn-primary btn-sm">Commander</a>
+      <a href="tel:+33383272426" class="btn btn-primary btn-sm">Appeler</a>
       <button class="nav-toggle" id="nav-toggle" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="main-nav">
         <span></span><span></span><span></span>
       </button>
@@ -43,40 +87,56 @@
 
   <!-- HERO -->
   <section class="hero" id="accueil">
-    <div class="hero-glow" aria-hidden="true"></div>
+    <div class="hero-grain" aria-hidden="true"></div>
     <div class="container hero-inner">
-    <div class="hero-content">
-      <p class="eyebrow">🍾 Livraison d'alcool &amp; épicerie de nuit à Nancy</p>
-      <h1>Votre épicerie de nuit,<br>livrée jusqu'à chez vous.</h1>
-      <p class="hero-lead">
-        Alcools, boissons, snacks et dépannage du quotidien : Mon Épicerie de
-        Nuit livre le centre de Nancy 7 jours sur 7, jusqu'à 5h du matin,
-        avec un service rapide et un excellent rapport qualité-prix.
-      </p>
 
-      <div class="hero-badges">
-        <a href="#avis" class="badge-rating">
-          <span class="stars" aria-hidden="true">★★★★★</span>
-          <strong>4,8/5</strong>
-          <span>· 95 avis Google</span>
-        </a>
-        <span class="badge-pill">🕒 Ouvert 7j/7 · service tardif</span>
+      <div class="hero-content">
+        <p class="eyebrow">Bureau de tabac · Boulevard d'Haussonville, Nancy</p>
+        <h1>Le tabac-presse<br>du quartier <em>Haussonville</em>.</h1>
+        <p class="hero-lead">
+          Tabac, journaux et magazines, jeux Française des Jeux, Compte Nickel,
+          timbres fiscaux et retrait de vos colis : Totem réunit au même
+          comptoir les services du quotidien, du lundi matin au dimanche midi.
+        </p>
+
+        <div class="hero-badges">
+          <a href="#avis" class="badge-rating">
+            <span class="stars" aria-hidden="true">★★★★<span class="star-half">★</span></span>
+            <strong>3,9/5</strong>
+            <span>· 47 avis Google</span>
+          </a>
+          <span class="badge-pill" id="status-pill" data-status="unknown">
+            <span class="status-dot" aria-hidden="true"></span>
+            <span id="status-text">Horaires ci-dessous</span>
+          </span>
+        </div>
+
+        <div class="hero-cta">
+          <a href="tel:+33383272426" class="btn btn-primary">
+            <svg viewBox="0 0 24 24" class="icon" aria-hidden="true"><path fill="currentColor" d="M6.6 10.8c1.4 2.8 3.8 5.2 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.9 21 3 13.1 3 3.5c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.4 0 .8-.2 1L6.6 10.8z"/></svg>
+            03 83 27 24 26
+          </a>
+          <a href="https://maps.app.goo.gl/biE6Pykx8JtbwdE49" target="_blank" rel="noopener" class="btn btn-ghost">
+            Itinéraire Google Maps
+          </a>
+        </div>
+
+        <p class="hero-note">📍 37 Bd d'Haussonville, 54000 Nancy</p>
       </div>
 
-      <div class="hero-cta">
-        <a href="tel:+33356582470" class="btn btn-primary">
-          <svg viewBox="0 0 24 24" class="icon" aria-hidden="true"><path fill="currentColor" d="M6.6 10.8c1.4 2.8 3.8 5.2 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.9 21 3 13.1 3 3.5c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.4 0 .8-.2 1L6.6 10.8z"/></svg>
-          Appeler : 03 56 58 24 70
-        </a>
-        <a href="https://maps.app.goo.gl/x1AcWGoN26urCd8v9" target="_blank" rel="noopener" class="btn btn-ghost">
-          Itinéraire Google Maps
-        </a>
+      <!-- Composition décorative vectorielle (aucune photo générée) -->
+      <div class="hero-visual reveal" aria-hidden="true">
+        <div class="totem-stack">
+          <span class="totem-piece piece-carotte">
+            <svg viewBox="0 0 60 100"><rect x="18" y="0" width="24" height="26" rx="12" fill="currentColor"/><rect x="18" y="74" width="24" height="26" rx="12" fill="currentColor"/><rect x="8" y="22" width="44" height="56" rx="8" fill="currentColor"/></svg>
+            <b>TABAC</b>
+          </span>
+          <span class="totem-piece piece-presse">📰<b>PRESSE</b></span>
+          <span class="totem-piece piece-jeux">🍀<b>JEUX</b></span>
+          <span class="totem-piece piece-colis">📦<b>COLIS</b></span>
+        </div>
       </div>
-    </div>
 
-    <div class="hero-photo reveal">
-      <img src="assets/photos/facade-nuit.png" alt="Devanture de Mon Épicerie de Nuit à Nancy, éclairée la nuit" loading="eager">
-    </div>
     </div>
   </section>
 
@@ -84,103 +144,142 @@
   <section class="stats">
     <div class="container stats-grid">
       <div class="stat-card reveal">
-        <span class="stat-number">4,8<span class="stat-unit">/5</span></span>
-        <span class="stat-label">Note Google · 95 avis</span>
+        <span class="stat-number">3,9<span class="stat-unit">/5</span></span>
+        <span class="stat-label">Note Google · 47 avis</span>
+      </div>
+      <div class="stat-card reveal">
+        <span class="stat-number">7h30</span>
+        <span class="stat-label">Ouverture en semaine</span>
       </div>
       <div class="stat-card reveal">
         <span class="stat-number">7j<span class="stat-unit">/7</span></span>
-        <span class="stat-label">Ouvert tous les jours</span>
+        <span class="stat-label">Dimanche matin inclus</span>
       </div>
       <div class="stat-card reveal">
-        <span class="stat-number">🌙</span>
-        <span class="stat-label">Service en soirée &amp; nuit</span>
-      </div>
-      <div class="stat-card reveal">
-        <span class="stat-number">🚴</span>
-        <span class="stat-label">Livraison à Nancy</span>
+        <span class="stat-number">📦</span>
+        <span class="stat-label">Point relais colis</span>
       </div>
     </div>
   </section>
 
-  <!-- ABOUT -->
+  <!-- À PROPOS -->
   <section class="about" id="apropos">
     <div class="container about-grid">
       <div class="about-text reveal">
         <p class="section-tag">À propos</p>
-        <h2>Une épicerie de quartier, pensée pour le dépannage rapide</h2>
+        <h2>Un vrai commerce de proximité, ouvert dès 7h30</h2>
         <p>
-          Mon Épicerie de Nuit est un commerce de proximité situé à Nancy,
-          spécialisé dans la livraison d'alcool et de produits d'épicerie. Que
-          ce soit pour une soirée improvisée, un dépannage tardif ou vos
-          courses du quotidien, notre équipe s'efforce d'offrir un service
-          rapide, un bon rapport qualité-prix et une relation client soignée.
+          Totem est le bureau de tabac du boulevard d'Haussonville, à Nancy.
+          On y vient pour son paquet et son journal, pour tenter sa chance aux
+          jeux, pour un timbre fiscal ou une carte de recharge — et de plus en
+          plus, pour récupérer un colis sur le chemin du travail.
+        </p>
+        <p>
+          Une équipe de quartier, un service rapide, et l'essentiel des
+          démarches du quotidien regroupées à un seul comptoir plutôt que
+          dispersées aux quatre coins de la ville.
         </p>
         <ul class="about-list">
-          <li>✔️ Large choix de spiritueux premium, bières et vins</li>
-          <li>✔️ Snacks, boissons et produits d'épicerie</li>
-          <li>✔️ Ouvert tard, 7 jours sur 7</li>
-          <li>✔️ Livraison à domicile, aussi sur Uber Eats &amp; Deliveroo</li>
+          <li><span class="tick">✓</span> Ouvert du lundi au samedi en continu, et le dimanche matin</li>
+          <li><span class="tick">✓</span> Presse quotidienne, magazines et jeux à gratter</li>
+          <li><span class="tick">✓</span> Compte Nickel &amp; timbres fiscaux sur place</li>
+          <li><span class="tick">✓</span> Dépôt et retrait de colis en point relais</li>
         </ul>
       </div>
-      <div class="about-visual reveal">
-        <img class="visual-card visual-card-tall" src="assets/photos/frigo-alcools.webp" alt="Frigo de spiritueux (whisky, vodka) en boutique" loading="lazy">
-        <img class="visual-card" src="assets/photos/vodka-grey-goose-belvedere.png" alt="Vodkas Grey Goose et Belvedere en vitrine" loading="lazy">
-        <img class="visual-card" src="assets/photos/champagne-dom-perignon.webp" alt="Champagne Dom Pérignon et autres cuvées disponibles" loading="lazy">
+
+      <aside class="about-card reveal">
+        <h3>En un coup d'œil</h3>
+        <dl class="facts">
+          <div><dt>Enseigne</dt><dd>Totem</dd></div>
+          <div><dt>Type</dt><dd>Bureau de tabac · Presse</dd></div>
+          <div><dt>Adresse</dt><dd>37 Bd d'Haussonville<br>54000 Nancy</dd></div>
+          <div><dt>Téléphone</dt><dd><a href="tel:+33383272426">03 83 27 24 26</a></dd></div>
+          <div><dt>Note Google</dt><dd>3,9/5 — 47 avis</dd></div>
+        </dl>
+        <a class="about-card-link" href="https://maps.app.goo.gl/biE6Pykx8JtbwdE49" target="_blank" rel="noopener">Voir la fiche Google →</a>
+      </aside>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section class="services" id="services">
+    <div class="container">
+      <p class="section-tag center">Nos services</p>
+      <h2 class="center">Tout ce que vous pouvez faire chez Totem</h2>
+      <p class="section-lead center">
+        Les services proposés au comptoir. Un doute sur une disponibilité
+        (produit, jeu, démarche) ? Un appel suffit.
+      </p>
+
+      <div class="services-grid">
+        <article class="service-card reveal">
+          <div class="service-icon">🚬</div>
+          <h3>Tabac</h3>
+          <p>Cigarettes, tabac à rouler, cigares et accessoires : l'offre complète d'un bureau de tabac agréé.</p>
+        </article>
+        <article class="service-card reveal">
+          <div class="service-icon">📰</div>
+          <h3>Presse &amp; magazines</h3>
+          <p>Quotidiens régionaux et nationaux, magazines et hebdomadaires, disponibles dès l'ouverture.</p>
+        </article>
+        <article class="service-card reveal">
+          <div class="service-icon">🍀</div>
+          <h3>Jeux FDJ</h3>
+          <p>Jeux à gratter et jeux de tirage de la Française des Jeux, à jouer ou à offrir.</p>
+        </article>
+        <article class="service-card reveal">
+          <div class="service-icon">💳</div>
+          <h3>Compte Nickel</h3>
+          <p>Ouverture de compte, dépôt et retrait d'espèces : les opérations Nickel se font ici.</p>
+        </article>
+        <article class="service-card reveal">
+          <div class="service-icon">🧾</div>
+          <h3>Timbres fiscaux</h3>
+          <p>Timbres fiscaux et démarches administratives courantes, sans passer par un guichet.</p>
+        </article>
+        <article class="service-card reveal">
+          <div class="service-icon">📦</div>
+          <h3>Colis</h3>
+          <p>Point <strong>Relais Pickup</strong> : envoi et retrait de vos colis aux horaires du magasin.</p>
+        </article>
       </div>
     </div>
   </section>
 
-  <!-- PRODUITS -->
-  <section class="products" id="produits">
-    <div class="container">
-      <p class="section-tag center">Nos rayons</p>
-      <h2 class="center">Ce que vous pouvez commander</h2>
-      <p class="section-lead center">
-        Un aperçu de notre offre. Disponibilité et tarifs sur simple demande par téléphone, ou via Uber Eats / Deliveroo.
-      </p>
-
-      <div class="products-grid">
-        <article class="product-card product-card-photo reveal">
-          <img src="assets/photos/frigo-alcools.webp" alt="Sélection de spiritueux en boutique" loading="lazy">
-          <h3>Spiritueux &amp; Alcools</h3>
-          <p>Whisky, vodka, rhum, liqueurs et champagnes pour toutes les occasions.</p>
-        </article>
-        <article class="product-card reveal">
-          <div class="product-icon">🍺</div>
-          <h3>Bières &amp; Vins</h3>
-          <p>Une sélection de bières locales et internationales, et de vins.</p>
-        </article>
-        <article class="product-card reveal">
-          <div class="product-icon">🥤</div>
-          <h3>Boissons &amp; Softs</h3>
-          <p>Sodas, jus, eaux et boissons énergisantes pour accompagner vos soirées.</p>
-        </article>
-        <article class="product-card reveal">
-          <div class="product-icon">🍫</div>
-          <h3>Snacks &amp; Confiseries</h3>
-          <p>Chips, biscuits, confiseries et de quoi grignoter à toute heure.</p>
-        </article>
-        <article class="product-card reveal">
-          <div class="product-icon">🧺</div>
-          <h3>Épicerie du quotidien</h3>
-          <p>Produits de dépannage pour la maison, disponibles en un message.</p>
-        </article>
-        <article class="product-card reveal">
-          <div class="product-icon">⚡</div>
-          <h3>Dépannage express</h3>
-          <p>Besoin de quelque chose en urgence, même tard le soir ? On s'en occupe.</p>
-        </article>
+  <!-- COLIS -->
+  <section class="parcel" id="colis">
+    <div class="container parcel-inner reveal">
+      <div class="parcel-text">
+        <p class="section-tag">Point relais</p>
+        <h2>Vos colis vous attendent au coin de la rue</h2>
+        <p>
+          Totem est un <strong>Relais Pickup</strong> du quartier : vous
+          récupérez vos commandes et déposez vos retours aux horaires du
+          magasin, sans file d'attente et sans créneau imposé.
+        </p>
+        <ul class="parcel-list">
+          <li><strong>Retrait</strong> — présentez votre code ou votre avis de passage.</li>
+          <li><strong>Dépôt &amp; retours</strong> — colis prêt et étiquette collée, c'est immédiat.</li>
+          <li><strong>Disponible</strong> — du lundi au samedi 7h30/8h → 19h15, et le dimanche matin.</li>
+        </ul>
+        <a href="tel:+33383272426" class="btn btn-ghost btn-sm">Vérifier qu'un colis est arrivé</a>
       </div>
-
-      <div class="premium-showcase">
-        <figure class="reveal">
-          <img src="assets/photos/vodka-grey-goose-belvedere.png" alt="Vodkas premium Grey Goose et Belvedere" loading="lazy">
-          <figcaption>Vodkas premium — Grey Goose, Belvedere…</figcaption>
-        </figure>
-        <figure class="reveal">
-          <img src="assets/photos/champagne-dom-perignon.webp" alt="Champagnes Dom Pérignon, Ruinart, Moët & Chandon" loading="lazy">
-          <figcaption>Champagnes — Dom Pérignon, Ruinart, Moët &amp; Chandon…</figcaption>
-        </figure>
+      <div class="parcel-visual">
+        <div class="relay-ticket">
+          <div class="relay-ticket-top">
+            <span class="relay-icon" aria-hidden="true">📦</span>
+            <div>
+              <strong>Point relais Totem</strong>
+              <span>37 Bd d'Haussonville, Nancy</span>
+            </div>
+          </div>
+          <div class="relay-ticket-body">
+            <div class="relay-row"><span>Lundi – vendredi</span><b>07h30 – 19h15</b></div>
+            <div class="relay-row"><span>Samedi</span><b>08h00 – 19h15</b></div>
+            <div class="relay-row"><span>Dimanche</span><b>09h00 – 12h15</b></div>
+          </div>
+          <p class="relay-ticket-foot">Retrait &amp; dépôt aux horaires du magasin</p>
+        </div>
       </div>
     </div>
   </section>
@@ -190,33 +289,49 @@
     <div class="container hours-grid">
       <div class="hours-text reveal">
         <p class="section-tag">Horaires</p>
-        <h2>Ouvert 7j/7, tard dans la soirée</h2>
+        <h2>Ouvert dès 7h30 en semaine</h2>
         <p>
-          Mon Épicerie de Nuit est ouverte tous les jours de la semaine, avec
-          des horaires étendus en soirée pour vous dépanner jusque tard dans
-          la nuit. Un doute sur l'horaire du jour ? Appelez-nous directement.
+          Totem ouvre tôt du lundi au samedi et vous accueille aussi le
+          dimanche matin. L'indicateur ci-contre se met à jour tout seul selon
+          l'heure et le jour.
         </p>
-        <a href="tel:+33356582470" class="btn btn-ghost btn-sm">
-          📞 03 56 58 24 70
-        </a>
+        <p class="hours-caution">
+          ⓘ Les horaires peuvent exceptionnellement varier (jours fériés,
+          livraisons). En cas de doute, un appel évite le déplacement.
+        </p>
+        <a href="tel:+33383272426" class="btn btn-ghost btn-sm">📞 03 83 27 24 26</a>
       </div>
-      <div class="hours-table-wrap reveal">
+
+      <div class="hours-panel reveal">
+        <div class="hours-status" id="hours-status-block">
+          <span class="status-dot big" aria-hidden="true"></span>
+          <div>
+            <strong id="hours-status-title">Horaires d'ouverture</strong>
+            <p id="hours-status-detail">Consultez le détail jour par jour.</p>
+          </div>
+        </div>
         <table class="hours-table">
+          <caption class="sr-only">Horaires d'ouverture de Totem</caption>
           <tbody>
-            <tr><th>Lundi</th><td>11h00 – 05h00</td></tr>
-            <tr><th>Mardi</th><td>11h00 – 05h00</td></tr>
-            <tr><th>Mercredi</th><td>11h00 – 05h00</td></tr>
-            <tr><th>Jeudi</th><td>11h00 – 05h00</td></tr>
-            <tr class="highlight"><th>Vendredi</th><td>12h00 – 05h00</td></tr>
-            <tr><th>Samedi</th><td>11h00 – 05h00</td></tr>
-            <tr><th>Dimanche</th><td>11h00 – 05h00</td></tr>
+            <tr data-day="1"><th scope="row">Lundi</th><td>07h30 – 19h15</td></tr>
+            <tr data-day="2"><th scope="row">Mardi</th><td>07h30 – 19h15</td></tr>
+            <tr data-day="3"><th scope="row">Mercredi</th><td>07h30 – 19h15</td></tr>
+            <tr data-day="4"><th scope="row">Jeudi</th><td>07h30 – 19h15</td></tr>
+            <tr data-day="5"><th scope="row">Vendredi</th><td>07h30 – 19h15</td></tr>
+            <tr data-day="6"><th scope="row">Samedi</th><td>08h00 – 19h15</td></tr>
+            <tr data-day="0"><th scope="row">Dimanche</th><td>09h00 – 12h15</td></tr>
           </tbody>
         </table>
-        <figure class="hours-photo">
-          <img src="assets/photos/enseigne-horaires.png" alt="Enseigne de Mon Épicerie de Nuit en boutique" loading="lazy">
-          <figcaption>🏪 Notre enseigne en boutique</figcaption>
-        </figure>
       </div>
+    </div>
+  </section>
+
+  <!-- GALERIE (masquée tant qu'aucune photo réelle n'est fournie) -->
+  <section class="gallery" id="galerie" hidden>
+    <div class="container">
+      <p class="section-tag center">La boutique</p>
+      <h2 class="center">Totem en images</h2>
+      <div class="gallery-grid" id="gallery-grid"></div>
     </div>
   </section>
 
@@ -224,38 +339,48 @@
   <section class="reviews" id="avis">
     <div class="container">
       <p class="section-tag center">Avis clients</p>
-      <h2 class="center">Ce que disent nos clients</h2>
+      <h2 class="center">Ce que disent les habitués</h2>
+
       <div class="rating-summary reveal">
-        <span class="rating-number">4,8</span>
+        <span class="rating-number">3,9</span>
         <div>
-          <span class="stars" aria-hidden="true">★★★★★</span>
-          <p>Basé sur 95 avis Google</p>
+          <span class="stars" aria-hidden="true">★★★★<span class="star-half">★</span></span>
+          <p>Note moyenne sur 47 avis Google</p>
         </div>
       </div>
 
       <div class="reviews-grid">
         <article class="review-card reveal">
           <span class="stars" aria-hidden="true">★★★★★</span>
-          <p>« Toujours disponible, rapport qualité prix au top, relation client au top. Bonne entente, je conseille cette épicerie, ouverte sept jours sur sept. »</p>
-          <p class="review-meta">Visité en mai 2025</p>
+          <blockquote>
+            Très pratique d'avoir un tabac-presse directement dans le quartier !
+            L'équipe est accueillante, le service rapide et on trouve tout ce
+            qu'il faut au quotidien. Un vrai plus pour le quartier, ça rend
+            bien service. Je recommande 👍
+          </blockquote>
+          <p class="review-meta">Avis Google · visite en décembre 2025</p>
         </article>
         <article class="review-card reveal">
           <span class="stars" aria-hidden="true">★★★★★</span>
-          <p>« Très sympa, toujours un plaisir. (Merci pour le cadeau) »</p>
-          <p class="review-meta">Simo et Moe · Visité en juin 2025</p>
+          <blockquote>
+            Je recommande vivement ce tabac qui est aussi mon point de retrait
+            de colis ! Ils sont vraiment super gentils, très aimables et
+            toujours souriants.
+          </blockquote>
+          <p class="review-meta">Avis Google · visite en février</p>
         </article>
-        <article class="review-card reveal">
-          <span class="stars" aria-hidden="true">★★★★★</span>
-          <p>« Service au top ! Franchement tout est nickel : le choix des produits, le prix, les vendeurs… Parfait, je recommande à 100 % ! »</p>
-          <p class="review-meta">Visité en octobre 2024</p>
+        <article class="review-card review-card-cta reveal">
+          <h3>Vous êtes passé chez nous ?</h3>
+          <p>Votre retour aide le quartier à trouver le magasin — et nous aide à progresser.</p>
+          <a href="https://maps.app.goo.gl/biE6Pykx8JtbwdE49" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Laisser un avis</a>
         </article>
       </div>
 
-      <div class="center">
-        <a href="https://maps.app.goo.gl/x1AcWGoN26urCd8v9" target="_blank" rel="noopener" class="btn btn-ghost btn-sm">
-          Voir tous les avis sur Google
+      <p class="center">
+        <a href="https://maps.app.goo.gl/biE6Pykx8JtbwdE49" target="_blank" rel="noopener" class="btn btn-ghost btn-sm">
+          Lire les 47 avis sur Google
         </a>
-      </div>
+      </p>
     </div>
   </section>
 
@@ -264,57 +389,64 @@
     <div class="container location-grid">
       <div class="map-wrap reveal">
         <iframe
-          title="Localisation Mon Épicerie de Nuit sur Google Maps"
-          src="https://maps.google.com/maps?q=48.6729929,6.1650252&z=16&output=embed"
+          title="Localisation de Totem, 37 Bd d'Haussonville à Nancy, sur Google Maps"
+          src="https://maps.google.com/maps?q=48.675264,6.163203&amp;z=17&amp;output=embed"
           loading="lazy"
           referrerpolicy="no-referrer-when-downgrade">
         </iframe>
       </div>
+
       <div class="location-info reveal" id="contact">
-        <p class="section-tag">Nous trouver &amp; commander</p>
-        <h2>Passez commande dès maintenant</h2>
+        <p class="section-tag">Nous trouver</p>
+        <h2>37 Bd d'Haussonville, Nancy</h2>
 
         <ul class="contact-list">
           <li>
             <span class="contact-icon">📍</span>
             <div>
               <strong>Adresse</strong>
-              <p>103 Boulevard d'Haussonville, 54000 Nancy</p>
+              <p>37 Boulevard d'Haussonville<br>54000 Nancy</p>
             </div>
           </li>
           <li>
             <span class="contact-icon">📞</span>
             <div>
               <strong>Téléphone</strong>
-              <p><a href="tel:+33356582470">03 56 58 24 70</a></p>
+              <p><a href="tel:+33383272426">03 83 27 24 26</a></p>
             </div>
           </li>
           <li>
-            <span class="contact-icon">🕒</span>
+            <span class="contact-icon">🕗</span>
             <div>
               <strong>Horaires</strong>
-              <p>Ouvert 7j/7 — voir le détail ci-dessus</p>
+              <p>Lun–Ven 7h30–19h15 · Sam 8h00–19h15 · Dim 9h00–12h15</p>
+            </div>
+          </li>
+          <li>
+            <span class="contact-icon">🚌</span>
+            <div>
+              <strong>Quartier</strong>
+              <p>Haussonville — Blandan — Mon Désert — Saurupt, sur le boulevard d'Haussonville.</p>
             </div>
           </li>
         </ul>
 
         <div class="contact-cta">
-          <a href="tel:+33356582470" class="btn btn-primary">
+          <a href="tel:+33383272426" class="btn btn-primary">
             <svg viewBox="0 0 24 24" class="icon" aria-hidden="true"><path fill="currentColor" d="M6.6 10.8c1.4 2.8 3.8 5.2 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.9 21 3 13.1 3 3.5c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.4 0 .8-.2 1L6.6 10.8z"/></svg>
             Appeler la boutique
           </a>
-          <a href="https://maps.app.goo.gl/x1AcWGoN26urCd8v9" target="_blank" rel="noopener" class="btn btn-ghost">
+          <a href="https://maps.app.goo.gl/biE6Pykx8JtbwdE49" target="_blank" rel="noopener" class="btn btn-ghost">
             Itinéraire
           </a>
         </div>
 
-        <div class="social-row">
-          <a class="social-badge social-instagram" href="https://www.instagram.com/mon.epicerie/" target="_blank" rel="noopener">📷 Instagram</a>
-          <span class="social-badge social-ubereats">🛵 Uber Eats</span>
-          <span class="social-badge social-deliveroo">Deliveroo</span>
-        </div>
-
-        <p class="disclaimer">⚠️ L'abus d'alcool est dangereux pour la santé, à consommer avec modération. Vente interdite aux mineurs.</p>
+        <p class="disclaimer">
+          ⚠️ Vente de tabac interdite aux mineurs de moins de 18 ans. Fumer nuit
+          gravement à votre santé et à celle de votre entourage. Les jeux
+          d'argent sont interdits aux mineurs — jouer comporte des risques :
+          endettement, isolement, dépendance. <a href="tel:0974751313">09 74 75 13 13</a> (appel non surtaxé).
+        </p>
       </div>
     </div>
   </section>
@@ -323,25 +455,32 @@
 
 <footer class="site-footer">
   <div class="container footer-inner">
-    <div>
-      <span class="logo-mark" aria-hidden="true">🛒</span>
-      <span class="logo-text">Mon Épicerie de Nuit</span>
-      <p>Livraison d'alcool &amp; épicerie à Nancy, 7j/7.</p>
+    <div class="footer-brand">
+      <svg class="logo-mark" viewBox="0 0 40 48" aria-hidden="true">
+        <path d="M20 2 L34 15 L20 28 L6 15 Z" fill="currentColor"/>
+        <rect x="15" y="28" width="10" height="18" rx="2" fill="currentColor" opacity=".55"/>
+      </svg>
+      <div>
+        <span class="logo-text">Totem</span>
+        <p>Tabac · Presse · Jeux · Colis — 37 Bd d'Haussonville, Nancy.</p>
+      </div>
     </div>
-    <nav class="footer-nav">
-      <a href="#produits">Produits</a>
+    <nav class="footer-nav" aria-label="Navigation de pied de page">
+      <a href="#services">Services</a>
+      <a href="#colis">Colis</a>
       <a href="#horaires">Horaires</a>
       <a href="#avis">Avis</a>
-      <a href="#localisation">Localisation</a>
+      <a href="#localisation">Nous trouver</a>
     </nav>
-    <p class="footer-copy">© <span id="year"></span> Mon Épicerie de Nuit — Nancy. Tous droits réservés.</p>
+    <p class="footer-copy">© <span id="year"></span> Totem — Nancy. Tous droits réservés.</p>
   </div>
 </footer>
 
-<a href="tel:+33356582470" class="floating-call" aria-label="Appeler Mon Épicerie de Nuit">
+<a href="tel:+33383272426" class="floating-call" aria-label="Appeler Totem au 03 83 27 24 26">
   <svg viewBox="0 0 24 24" class="icon" aria-hidden="true"><path fill="currentColor" d="M6.6 10.8c1.4 2.8 3.8 5.2 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.9 21 3 13.1 3 3.5c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.4 0 .8-.2 1L6.6 10.8z"/></svg>
 </a>
 
+<script src="js/photos.js"></script>
 <script src="js/script.js"></script>
 </body>
 </html>
